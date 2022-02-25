@@ -7,7 +7,7 @@
 
 body {
 
-    background-color: black;
+    background-image: linear-gradient(to bottom, black, rgb(239, 241, 86) );
     font-family: "Bebas Neue", sans-serif;
     text-transform: uppercase;
 
@@ -42,6 +42,11 @@ li {
 
 
 }
+a:hover{
+    transform: scale(1.1);
+    color: rgb(239, 241, 86);
+    text-shadow: 5px;
+}
 
 a {
 
@@ -50,15 +55,21 @@ a {
 }
 
 
-.sec__index {
+.sec__index{
     display: flex;
     width: 70%;
     max-width: 360px;
     margin: 0 auto;
     justify-content: center;
+    
+}
+.transf:hover{
+    transform: scale(1.1);
 }
 
+
 .img__idx {
+    
     width: 50%;
     height: auto;
     padding-left: 25%;
