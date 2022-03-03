@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
   <title>Papas la Union</title>
   <link rel="stylesheet" href="./estilos/style.css">
   <link rel="shortcut icon" href="./imagenes/favicon.png" type="image/x-icon">
@@ -13,10 +17,11 @@
 
 <body>
 
+
   <section class="section__index">
 
-    
-      <header class="banner">
+
+    <header class="banner">
 
       <a href="./index.html"><img class="img__bnr" src="./imagenes/banner.png" alt="banner"></a>
 
@@ -47,49 +52,102 @@
       </ul>
 
     </nav>
-  
 
-    <section  class="titulos">
-      <h1 > El Verdadero Sabor de la Papa</h1>
+
+    <section class="titulos">
+      <h1> El Verdadero Sabor de la Papa</h1>
     </section>
 
-    
-      <div id="sec__index" class="sec1 transf">
-        <h3 class="secciones__index"> Conoce nuestros productos</h3>
-        <a href="./secciones/productos.html"><img class="img__idx" src="./imagenes/bastonalvacio.JPG"
-            alt="bastonalvacio">
-        </a>
-      </div>
+   
+    <!--<div id="sec__index" class="sec1 transf">
+      <h3 class="secciones__index"> Conoce nuestros productos</h3>
+      <a href="./secciones/productos.html"><img class="img__idx" src="./imagenes/bastonalvacio.JPG" alt="bastonalvacio">
+      </a>
+    </div>
 
-      <div id="sec__index" class="sec2 transf">
-        <h3 class="secciones__index"> Conoce como probarnos </h3>
-        <a href="./secciones/recetas.html">
-          <img class="img__idx" src="./imagenes/receta1.JPG" alt="receta1">
-        </a>
-      </div>
+    <div id="sec__index" class="sec2 transf">
+      <h3 class="secciones__index"> Conoce como probarnos </h3>
+      <a href="./secciones/recetas.html">
+        <img class="img__idx" src="./imagenes/receta1.JPG" alt="receta1">
+      </a>
+    </div>
 
-      <div id="sec__index" class="sec3 transf">
-        <h3 class="secciones__index"> Conoce nuestra Familia</h3>
-        <a href="./secciones/nosotros.html">
+    <div id="sec__index" class="sec3 transf">
+      <h3 class="secciones__index"> Conoce nuestra Familia</h3>
+      <a href="./secciones/nosotros.html">
         <img class="img__idx" src="./imagenes/nosotros1.JPG" alt="nosotros">
-        </a>
-      </div>
+      </a>
+    </div>
 
-      <div id="sec__index" class="sec4 transf">
-        <h3 class="secciones__index"> Conoce como contactarnos</h3>
-        <a href="./secciones/contacto.html">
+    <div id="sec__index" class="sec4 transf">
+      <h3 class="secciones__index"> Conoce como contactarnos</h3>
+      <a href="./secciones/contacto.html">
         <img class="img__idx" src="./imagenes/pedidosya.JPG" alt="">
-        </a>
-      </div>
-    
+      </a>
+    </div>
+  -->
   </section>
+  
 
+  <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="sec__index"><img class="img__idx" src="./imagenes/bastonalvacio.JPG" class="d-block w-100" alt="bastonalvacio">
+        </div>
+          <div class="carousel-caption d-none d-md-block">
+          <h5 class="secciones__index">Nuestros Productos</h5>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+       <div class="sec__index"> <img class:"img__idx" src="./imagenes/receta1.JPG" class="d-block w-100" alt="receta1">
+       </div>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="secciones__index">Nuestras Recetas</h5>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+       <div class="sec__index" ><img class:"img__idx" src="./imagenes/nosotros1.JPG" class="d-block w-100" alt="nosotros">
+       </div> 
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="secciones__index">Nuestra Familia</h5>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <article >
+    <div class="publicidad"> <img class:"img__idx" src="./imagenes/gifpublicidad.gif" class="d-block w-100" alt="gifpublicidad">
+    </div> 
+  </article>
 
   <footer>
+    <div class="fixed-bottom fixed">Escribinos<img src="./imagenes/chat-dots.svg" alt="iconchat"></div>
     <h2> GRACIAS POR VISITARNOS</h2>
-<P> Desarrollado por Casandra Acosta</P>
+    <P> Desarrollado por Casandra Acosta</P>
 
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>

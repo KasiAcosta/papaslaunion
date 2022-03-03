@@ -7,8 +7,8 @@
 
 body {
 
-    background-image: linear-gradient(to bottom, black, rgb(239, 241, 86) );
-    font-family: "Bebas Neue", sans-serif;
+    background-color: black;
+    font-family: "Bebas Neue"!important;
     text-transform: uppercase;
 
 }
@@ -53,30 +53,34 @@ a {
     color: white;
     text-decoration: none;
 }
-
-
+article{
+    margin-top: 5%;
+}
+.publicidad{
+   
+    height: 25%;
+    width: 25%;
+    display:block;
+    margin:auto;
+}
 .sec__index{
-    display: flex;
-    width: 70%;
-    max-width: 360px;
-    margin: 0 auto;
-    justify-content: center;
-    
+  
+    height: 50%;
+    width: 30%;
+    display:block;
+    margin:auto;
+}
+
+.img__idx {
+    max-width: 100%;
+    max-height: 100%;
+   
+   }
+ 
+
 }
 .transf:hover{
     transform: scale(1.1);
-}
-
-
-.img__idx {
-    
-    width: 50%;
-    height: auto;
-    padding-left: 25%;
-    padding-right: 25%;
-    padding-top: 5%;
-    padding-bottom: 10%;
-
 }
 
 .titulos {
@@ -88,9 +92,9 @@ a {
 }
 
 .secciones__index {
-    font-size: 200%;
-    letter-spacing: 5px;
-    color: white;
+    background-color: black;
+    letter-spacing: 2px;
+    color: rgb(239, 241, 86);
     text-align: center;
 }
 
@@ -104,6 +108,12 @@ footer {
     margin-bottom: 0;
     margin-top: 2rem;
     grid-area: footer;
+}
+.fixed{
+    margin-right: 5%;
+    margin-bottom: 10%;
+    color: black;
+    text-align: right;
 }
 
 .titulos {
@@ -159,25 +169,16 @@ footer {
 
 /* Sección productos*/
 
-.div__prod {
-    background-color: rgb(53, 49, 49);
-    display: flex;
-    width: 70%;
-    max-width: 360px;
-    margin: 5px auto;
-    flex-direction: column;
-    border: 5px solid rgb(225, 226, 126);
-
+.cont__prod{
+    width: 100px;
+    height: auto;
+   
 }
 
-.img__prod {
-    width: 50%;
-    height: auto;
-    padding-left: 25%;
-    padding-right: 25%;
-    padding-top: 10%;
-    padding-bottom: 5%;
 
+.img__prod {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .name__prod {
@@ -187,44 +188,25 @@ footer {
     text-align: center;
 }
 
+
 .precios {
     font-size: 200%;
     color: black;
-    text-align: end;
+   text-align: end;
     margin: 10px;
 }
 
-.div__prod1 {
-    grid-area: div__prod1;
+.productos{
+    grid-area: productos;
 }
-
-.div__prod2 {
-    grid-area: div__prod2;
-}
-
-.div__prod3 {
-    grid-area: div__prod3;
-}
-
-.div__prod4 {
-    grid-area: div__prod4;
-}
-
-.section__productos {
-    display: grid;
-    gap: 30px;
-    grid-template-areas:
+grid-template-areas:
         "banner"
         "nav"
         "titulo"
-        "div__prod1"
-        "div__prod2"
-        "div__prod3"
-        "div__prod4"
+        "productos"
         "footer";
 
 }
-
 /*Seccion Recetas*/
 .art__r {
     color: white;
@@ -266,11 +248,14 @@ footer {
     text-align: center;
     margin: 5px;
 }
-
-.rec1 {
-    grid-area: rec1;
+.recetas{
+    padding-right: 25%;
 }
 
+.recetas {
+    grid-area: recetas;
+}
+/*
 .rec2 {
     grid-area: rec2;
 }
@@ -282,7 +267,7 @@ footer {
 .rec4 {
     grid-area: rec4;
 }
-
+*/
 .section__recetas {
     display: grid;
     gap: 30px;
@@ -290,10 +275,7 @@ footer {
         "banner"
         "nav"
         "titulo"
-        "rec1"
-        "rec2"
-        "rec3"
-        "rec4"
+        "recetas"
         "footer";
 
 }
@@ -390,8 +372,7 @@ footer {
             "banner     banner"
             "nav        nav"
             "titulo     titulo"
-            "div__prod1 div__prod2"
-            "div__prod3 div__prod4"
+            "productos  productos"
             "footer     footer";
     }
 
@@ -446,25 +427,16 @@ footer {
         ;
     }
 
-    body {
-        background-color: white;
-    }
-
-
     .titulos {
         font-size: 300%;
     }
-
-    nav ul {
-
-        justify-content: flex-end;
-
-    }
+nav ul li a{
+    align-items: flex-end;
+}
 
     .secciones__index {
         font-size: 300%;
         letter-spacing: 5px;
-        color: black;
     }
 
     .section__productos {
@@ -472,8 +444,7 @@ footer {
         grid-template-areas:
             "banner     nav"
             "titulo     titulo"
-            "div__prod1 div__prod2"
-            "div__prod3 div__prod4"
+            "productos  productos"
             "footer     footer";
     }
 
@@ -491,20 +462,17 @@ footer {
         grid-template-areas:
         "banner     nav"
         "titulo     titulo"
-        "rec1       rec2"
-        "rec3       rec4"
+        "recetas    recetas"
         "footer     footer";
      }
 
-    .art__r{
-        color: black;
-    } 
+  
     .tit__art {
-        color: black; 
+       
         font-size: 300%;
     } 
     .p__rec{
-            color: black;
+           
             font-size: 150%;
     }
     .li__r{
@@ -524,11 +492,7 @@ footer {
         justify-content: space-around;
         
     }
-    .div__n{
-       
-        color: black;
-        
-    }
+  
     .img__n{
         
         width: 70%;
@@ -545,9 +509,7 @@ footer {
         "footer footer";
 
     }
-    .sec__form{
-        color: black;
-    }
+ 
 
 }
 
