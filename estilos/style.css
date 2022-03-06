@@ -56,25 +56,20 @@ a {
 article{
     margin-top: 5%;
 }
-.publicidad{
-   
-    height: 25%;
-    width: 25%;
-    display:block;
-    margin:auto;
+.contenido__idx{
+    align-items: center;
 }
 .sec__index{
-  
-    height: 50%;
-    width: 30%;
-    display:block;
-    margin:auto;
+    height: 70%;
+    width: auto;
+   display: flex;
+   justify-content: center;
 }
 
 .img__idx {
     max-width: 100%;
     max-height: 100%;
-   
+    
    }
  
 
@@ -92,10 +87,24 @@ article{
 }
 
 .secciones__index {
+    font-size: 200%;
     background-color: black;
     letter-spacing: 2px;
     color: rgb(239, 241, 86);
     text-align: center;
+}
+.banner__footer{
+    grid-area: bannerfooter;
+}
+.content__bf{
+    height: auto;
+    width: 100%;
+    display:block;
+    margin:auto;
+}
+.img__bf{
+    max-width: 100%;
+    max-height: 100%; 
 }
 
 footer {
@@ -106,8 +115,6 @@ footer {
     text-align: center;
     padding: 5em;
     margin-bottom: 0;
-    margin-top: 2rem;
-    grid-area: footer;
 }
 .fixed{
     margin-right: 5%;
@@ -131,21 +138,8 @@ nav {
 .titulos {
     grid-area: titulo;
 }
-
-.sec1 {
-    grid-area: sec1;
-}
-
-.sec2 {
-    grid-area: sec2;
-}
-
-.sec3 {
-    grid-area: sec3;
-}
-
-.sec4 {
-    grid-area: sec4;
+.contenido__idx{
+    grid-area: contenido;
 }
 
 footer {
@@ -154,15 +148,13 @@ footer {
 
 .section__index {
     display: grid;
-    gap: 30px;
+    gap:30px;
     grid-template-areas:
         "banner"
         "nav"
         "titulo"
-        "sec1"
-        "sec2"
-        "sec3"
-        "sec4"
+        "contenido"
+        "bannerfooter"
         "footer";
 
 }
@@ -199,32 +191,40 @@ footer {
 .productos{
     grid-area: productos;
 }
+.section__productos{ 
+    display: grid;
+    gap:30px;  
 grid-template-areas:
         "banner"
         "nav"
         "titulo"
         "productos"
+        "bannerfooter"
         "footer";
 
 }
+
 /*Seccion Recetas*/
+
+.vid__rec{
+text-align: center;
+}
+
 .art__r {
     color: white;
     letter-spacing: 1px;
     display: flex;
-    width: 90%;
     max-width: 90%;
     margin: 5px auto;
     flex-direction: column;
     border: 5px solid rgb(225, 226, 126);
     align-items: center;
+    font-size: 80%;
 
 }
 
 .img__r {
-
-    width: 40%;
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     padding-left: 25%;
     padding-right: 25%;
@@ -248,34 +248,40 @@ grid-template-areas:
     text-align: center;
     margin: 5px;
 }
-.recetas{
-    padding-right: 25%;
+
+.vid__rec{
+    grid-area: video;
 }
 
-.recetas {
-    grid-area: recetas;
+.rec1{
+    grid-area: rec1;
 }
-/*
-.rec2 {
+
+.rec2{
     grid-area: rec2;
 }
 
-.rec3 {
+.rec3{
     grid-area: rec3;
 }
 
-.rec4 {
+.rec4{
     grid-area: rec4;
 }
-*/
+
 .section__recetas {
     display: grid;
-    gap: 30px;
+    gap:30px;
     grid-template-areas:
         "banner"
         "nav"
         "titulo"
-        "recetas"
+        "video"
+        "rec1"
+        "rec2"
+        "rec3"
+        "rec4"
+        "bannerfooter"
         "footer";
 
 }
@@ -314,13 +320,14 @@ grid-template-areas:
 }
 .section__nosotros{
     display: grid;
-    gap: 30px;
+    gap:30px;
     grid-template-areas:
     "banner"
     "nav"
     "titulo"
     "nos1"
     "nos2"
+    "bannerfooter"
     "footer";
 }
 /*Seccion contacto*/
@@ -343,6 +350,7 @@ grid-template-areas:
     "nav"
     "titulo"
     "form"
+    "bannerfooter"
     "footer"
 }
 
@@ -352,28 +360,25 @@ grid-template-areas:
     .section__index {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-            "banner     banner"
-            "nav        nav"
-            "titulo     titulo"
-            "sec1       sec2"
-            "sec3       sec4"
-            "footer     footer"
+            "banner       banner"
+            "nav          nav"
+            "titulo       titulo"
+            "contenido    contenido"
+            "bannerfooter bannerfooter"
+            "footer       footer"
         ;
     }
 
-    .secciones__index {
-        font-size: 150%;
-        letter-spacing: 2px;
-    }
 
     .section__productos {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-            "banner     banner"
-            "nav        nav"
-            "titulo     titulo"
-            "productos  productos"
-            "footer     footer";
+            "banner       banner"
+            "nav          nav"
+            "titulo       titulo"
+            "productos    productos"
+            "bannerfooter bannerfooter"
+            "footer       footer";
     }
 
     .name__prod {
@@ -395,17 +400,6 @@ grid-template-areas:
     font-size: 150%;
     letter-spacing: 6%;
 }
-.section__nosotros{
-    display: grid;
-    gap: 30px;
-    grid-template-areas:
-    "banner"
-    "nav"
-    "titulo"
-    "nos1"
-    "nos2"
-    "footer";
-}
 
 .art__nos{
     flex-direction: row;
@@ -419,11 +413,11 @@ grid-template-areas:
     .section__index {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-            "banner     nav"
-            "titulo     titulo"
-            "sec1       sec2"
-            "sec3       sec4"
-            "footer     footer"
+            "banner       nav"
+            "titulo       titulo"
+            "contenido    contenido"
+            "bannerfooter bannerfooter"
+            "footer       footer"
         ;
     }
 
@@ -442,10 +436,11 @@ nav ul li a{
     .section__productos {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-            "banner     nav"
-            "titulo     titulo"
-            "productos  productos"
-            "footer     footer";
+            "banner       nav"
+            "titulo       titulo"
+            "productos    productos"
+            "bannerfooter bannerfooter"
+            "footer       footer";
     }
 
     .div__prod {
@@ -460,10 +455,13 @@ nav ul li a{
     .section__recetas {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-        "banner     nav"
-        "titulo     titulo"
-        "recetas    recetas"
-        "footer     footer";
+        "banner       nav"
+        "titulo       titulo"
+        "video        video"
+        "rec1         rec2"
+        "rec3         rec4"
+        "bannerfooter bannerfooter"
+        "footer       footer";
      }
 
   
@@ -482,10 +480,11 @@ nav ul li a{
     .section__nosotros{
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-        "banner nav"
-        "titulo titulo"
-        "nos1   nos2"
-        "footer footer";
+        "banner       nav"
+        "titulo       titulo"
+        "nos1         nos2"
+        "bannerfooter bannerfooter"
+        "footer       footer";
     }
     .art__nos{
         flex-direction: column;
@@ -503,10 +502,11 @@ nav ul li a{
     .section__contacto{
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-        "banner nav"
-        "titulo titulo"
-        "form   form"
-        "footer footer";
+        "banner       nav"
+        "titulo       titulo"
+        "form         form"
+        "bannerfooter bannerfooter"
+        "footer       footer";
 
     }
  
