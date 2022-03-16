@@ -15,9 +15,10 @@ header {
   width: 95%;
   max-width: 960px;
   margin: 0 auto;
-  grid-area: banner; }
+  margin-left: auto;
+  margin-right: auto; }
   header .img__bnr {
-    width: 95%;
+    width: 70%;
     height: auto; }
 
 nav ul {
@@ -34,7 +35,7 @@ nav ul {
       text-decoration: none; }
       nav ul li a:hover {
         transform: scale(1.1);
-        color: #eff156;
+        color: #fad100;
         text-shadow: 5px; }
 
 article {
@@ -61,13 +62,13 @@ article {
   letter-spacing: 5px;
   color: black;
   text-align: center;
-  background-color: #eff156; }
+  background-color: #fad100; }
 
 .secciones__index {
   font-size: 200%;
   background-color: black;
   letter-spacing: 2px;
-  color: #eff156;
+  color: #fad100;
   text-align: center; }
 
 .banner__footer {
@@ -87,15 +88,53 @@ footer {
   letter-spacing: 5px;
   color: black;
   font-size: 100%;
-  background-color: #eff156;
+  background-color: #fad100;
   text-align: center;
   padding: 5em;
   margin-bottom: 0; }
 
-.titulos {
+.redes {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 150px; }
+
+.contac--instagram {
+  color: #dd7b2b; }
+
+.contac--facebook {
+  color: blue; }
+
+.contac--whatsapp {
+  color: #3fe63f; }
+
+.contac, .contac--instagram, .contac--facebook, .contac--whatsapp {
+  background-image: url(../imagenes/fondopapas.jpg);
+  font-weight: bold;
+  border-radius: 10px;
+  border: solid 5px; }
+
+.contac--instagram {
+  border-color: #dd7b2b; }
+
+.contac--facebook {
+  border-color: blue; }
+
+.contac--whatsapp {
+  border-color: #3fe63f;
   grid-area: titulo; }
 
-header {
+.my_mixin {
+  height: 100px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto; }
+
+.contenido__idx {
+  grid-area: contenido; }
+
+.banner {
   grid-area: banner; }
 
 nav {
@@ -103,9 +142,6 @@ nav {
 
 .titulos {
   grid-area: titulo; }
-
-.contenido__idx {
-  grid-area: contenido; }
 
 footer {
   grid-area: footer; }
@@ -118,7 +154,7 @@ footer {
 /* Sección productos*/
 .cont__prod {
   width: 100px;
-  height: auto; }
+  height: 100px; }
 
 .img__prod {
   max-width: 100%;
@@ -155,7 +191,7 @@ footer {
   max-width: 90%;
   margin: 5px auto;
   flex-direction: column;
-  border: 5px solid #eff156;
+  border: 5px solid #fad100;
   align-items: center;
   font-size: 80%; }
 
@@ -204,7 +240,7 @@ footer {
 .art__nos {
   display: flex;
   flex-direction: column;
-  border: 5px solid #eff156;
+  border: 5px solid #fad100;
   align-items: center; }
 
 .div__n {
