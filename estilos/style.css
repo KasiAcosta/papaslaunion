@@ -12,24 +12,24 @@ body {
 header {
   background-color: black;
   display: grid;
-  width: 95%;
-  max-width: 960px;
+  max-width: 90%;
   margin: 0 auto;
   margin-left: auto;
   margin-right: auto; }
   header .img__bnr {
-    width: 70%;
+    width: 85%;
     height: auto; }
 
 nav ul {
   background-color: black;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center; }
   nav ul li {
     font-size: 150%;
     list-style: none;
     text-transform: uppercase;
-    margin: 10px; }
+    margin: 2%; }
     nav ul li a {
       color: white;
       text-decoration: none; }
@@ -51,8 +51,8 @@ article {
   justify-content: center; }
 
 .img__idx {
-  max-width: 100%;
-  max-height: 100%; }
+  max-width: 70%;
+  max-height: 70%; }
 
 .transf:hover {
   transform: scale(1.1); }
@@ -71,9 +71,6 @@ article {
   color: #fad100;
   text-align: center; }
 
-.banner__footer {
-  grid-area: bannerfooter; }
-
 .content__bf {
   height: auto;
   width: 100%;
@@ -90,12 +87,12 @@ footer {
   font-size: 100%;
   background-color: #fad100;
   text-align: center;
-  padding: 5em;
-  margin-bottom: 0; }
+  margin-bottom: 0%; }
 
 .redes {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
   padding-bottom: 150px; }
 
 .contac--instagram {
@@ -108,10 +105,20 @@ footer {
   color: #3fe63f; }
 
 .contac, .contac--instagram, .contac--facebook, .contac--whatsapp {
+  margin: 5%;
   background-image: url(../imagenes/fondopapas.jpg);
+  font-size: 100%;
   font-weight: bold;
-  border-radius: 10px;
-  border: solid 5px; }
+  border-radius: 10%;
+  border: solid 2px;
+  max-width: 70%;
+  max-height: 70%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.contac__img {
+  width: 60%;
+  height: 60%; }
 
 .contac--instagram {
   border-color: #dd7b2b; }
@@ -122,14 +129,6 @@ footer {
 .contac--whatsapp {
   border-color: #3fe63f;
   grid-area: titulo; }
-
-.my_mixin {
-  height: 100px;
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto; }
 
 .contenido__idx {
   grid-area: contenido; }
@@ -143,6 +142,9 @@ nav {
 .titulos {
   grid-area: titulo; }
 
+.banner__footer {
+  grid-area: bannerfooter; }
+
 footer {
   grid-area: footer; }
 
@@ -152,25 +154,35 @@ footer {
   grid-template-areas: "banner" "nav" "titulo" "contenido" "bannerfooter" "footer"; }
 
 /* Sección productos*/
+.productos {
+  display: flex;
+  flex-direction: column; }
+
 .cont__prod {
-  width: 100px;
-  height: 100px; }
+  color: white;
+  justify-items: center;
+  max-width: 50%;
+  margin: 5% auto;
+  border: 5px solid #fad100;
+  padding-top: 5%;
+  font-size: 140%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 5px 5px #868653; }
 
 .img__prod {
-  max-width: 100%;
-  max-height: 100%; }
+  max-width: 50%;
+  height: auto;
+  padding-bottom: 5%; }
 
 .name__prod {
-  font-size: 200%;
-  letter-spacing: 5px;
-  color: white;
-  text-align: center; }
+  font-size: 70%;
+  letter-spacing: 5%; }
 
 .precios {
-  font-size: 200%;
-  color: black;
-  text-align: end;
-  margin: 10px; }
+  font-size: 70%; }
 
 .productos {
   grid-area: productos; }
@@ -182,7 +194,17 @@ footer {
 
 /*Seccion Recetas*/
 .vid__rec {
-  text-align: center; }
+  overflow: hidden;
+  padding-bottom: 400px;
+  position: relative;
+  height: 0; }
+
+iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
 
 .art__r {
   color: white;
@@ -246,10 +268,10 @@ footer {
 .div__n {
   align-items: center;
   width: 70%;
-  max-width: 360px;
+  max-width: 150%;
   margin: 5px auto;
   color: white;
-  font-size: 200%;
+  font-size: 150%;
   text-align: center; }
 
 .img__n {
@@ -276,7 +298,7 @@ footer {
   letter-spacing: 8px; }
 
 .sec__form {
-  padding: 30px;
+  padding: 5%;
   text-align: center;
   color: white;
   grid-area: form; }
@@ -290,9 +312,27 @@ footer {
   .section__index {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "banner       banner" "nav          nav" "titulo       titulo" "contenido    contenido" "bannerfooter bannerfooter" "footer       footer"; }
+  .redes {
+    flex-direction: row; }
+  .contac, .contac--instagram, .contac--facebook, .contac--whatsapp {
+    max-width: 90px;
+    max-height: 90px;
+    margin: auto;
+    display: block; }
+  .contac__img {
+    width: 80px;
+    max-height: 80px; }
   .section__productos {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "banner       banner" "nav          nav" "titulo       titulo" "productos    productos" "bannerfooter bannerfooter" "footer       footer"; }
+  .productos {
+    flex-direction: row;
+    flex-wrap: wrap; }
+  .cont__prod {
+    max-width: 40%;
+    font-size: 80%; }
+  .img__prod {
+    max-width: 40%; }
   .name__prod {
     font-size: 150%;
     letter-spacing: 2px; }
@@ -305,26 +345,29 @@ footer {
     font-size: 150%;
     letter-spacing: 6%; }
   .art__nos {
-    flex-direction: row; } }
+    flex-direction: row; }
+  .section__recetas {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "banner       banner" "nav          nav" "titulo       titulo" "video        video" "rec1         rec2" "rec3         rec4" "bannerfooter bannerfooter" "footer       footer"; } }
 
 @media screen and (min-width: 1024px) {
+  nav ul li a {
+    align-items: flex-end; }
   .section__index {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "banner       nav" "titulo       titulo" "contenido    contenido" "bannerfooter bannerfooter" "footer       footer"; }
   .titulos {
     font-size: 300%; }
-  nav ul li a {
-    align-items: flex-end; }
   .secciones__index {
     font-size: 300%;
     letter-spacing: 5px; }
   .section__productos {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "banner       nav" "titulo       titulo" "productos    productos" "bannerfooter bannerfooter" "footer       footer"; }
-  .div__prod {
-    background-color: #444040; }
-  .precios {
-    color: white; }
+  .cont__prod {
+    max-width: 30%; }
+  .img__prod {
+    max-width: 50%; }
   .section__recetas {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "banner       nav" "titulo       titulo" "video        video" "rec1         rec2" "rec3         rec4" "bannerfooter bannerfooter" "footer       footer"; }
