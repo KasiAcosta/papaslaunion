@@ -379,7 +379,8 @@ iframe {
     grid-area: form;
 }
 .label__cont{
-    font-size: 300%;
+    font-size: 100%;
+    
 }
 .section__contacto {
     display: grid;
@@ -482,6 +483,11 @@ iframe {
             "rec3         rec4"
             "bannerfooter bannerfooter"
             "footer       footer";
+    }
+
+    .label__cont{
+        font-size: 150%;
+        letter-spacing: 3px;
     }
 
 }
