@@ -21,7 +21,8 @@ header {
     .img__bnr { 
         width: 85%;
         height: auto;
-        
+        display: block;
+        margin: auto;
     }
 }
 
@@ -30,14 +31,15 @@ nav {
         background-color: $color__fondo;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
        
 
         li {
             font-size: 150%;
             list-style: none;
             text-transform: uppercase;
-            margin: 2%;
+            margin-left: 0%;
+            margin-right: 5%;
 
             a {
 

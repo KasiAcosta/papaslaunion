@@ -18,18 +18,21 @@ header {
   margin-right: auto; }
   header .img__bnr {
     width: 85%;
-    height: auto; }
+    height: auto;
+    display: block;
+    margin: auto; }
 
 nav ul {
   background-color: black;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: space-around; }
   nav ul li {
     font-size: 150%;
     list-style: none;
     text-transform: uppercase;
-    margin: 2%; }
+    margin-left: 0%;
+    margin-right: 5%; }
     nav ul li a {
       color: white;
       text-decoration: none; }
@@ -74,12 +77,11 @@ article {
 .content__bf {
   height: auto;
   width: 100%;
-  display: block;
-  margin: auto; }
+  display: flex;
+  justify-content: center; }
 
 .img__bf {
-  max-width: 100%;
-  max-height: 100%; }
+  width: 100%; }
 
 footer {
   letter-spacing: 5px;
@@ -161,7 +163,7 @@ footer {
 .cont__prod {
   color: white;
   justify-items: center;
-  max-width: 50%;
+  width: 70%;
   margin: 5% auto;
   border: 5px solid #fad100;
   padding-top: 5%;
@@ -170,10 +172,10 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 10px 5px 5px #868653; }
+  box-shadow: 10px 5px 25px #868653; }
 
 .img__prod {
-  max-width: 50%;
+  width: 85%;
   height: auto;
   padding-bottom: 5%; }
 
@@ -303,6 +305,9 @@ iframe {
   color: white;
   grid-area: form; }
 
+.label__cont {
+  font-size: 300%; }
+
 .section__contacto {
   display: grid;
   gap: 30px;
@@ -329,10 +334,8 @@ iframe {
     flex-direction: row;
     flex-wrap: wrap; }
   .cont__prod {
-    max-width: 40%;
+    width: 50%;
     font-size: 80%; }
-  .img__prod {
-    max-width: 40%; }
   .name__prod {
     font-size: 150%;
     letter-spacing: 2px; }
@@ -350,7 +353,11 @@ iframe {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "banner       banner" "nav          nav" "titulo       titulo" "video        video" "rec1         rec2" "rec3         rec4" "bannerfooter bannerfooter" "footer       footer"; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 800px) {
+  .cont__prod {
+    max-width: 40%; } }
+
+@media screen and (min-width: 950px) {
   nav ul li a {
     align-items: flex-end; }
   .section__index {
@@ -365,9 +372,7 @@ iframe {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "banner       nav" "titulo       titulo" "productos    productos" "bannerfooter bannerfooter" "footer       footer"; }
   .cont__prod {
-    max-width: 30%; }
-  .img__prod {
-    max-width: 50%; }
+    width: 30%; }
   .section__recetas {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "banner       nav" "titulo       titulo" "video        video" "rec1         rec2" "rec3         rec4" "bannerfooter bannerfooter" "footer       footer"; }
